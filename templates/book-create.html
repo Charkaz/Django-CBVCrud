@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<div style="margin-top: 10px; margin-bottom:50px ;" class="container">
+    <div class="row">
+        <div class="col-md-6">
+           <br><br><br><h1>Yeni kitab</h1><hr>
+           <span>Kitabin qeydiyyatdan kecirilmesi</span>
+        </div>
+        <div class="col-md-6">
+            <form method="POST" action="." enctype="multipart/form-data">
+                {% csrf_token %}
+                    {{ form.as_p }}
+                <button class="btn btn-primary" type="submit">Qeyd</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

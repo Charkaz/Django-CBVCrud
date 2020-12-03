@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<div class="container">
+    <div class="row">
+        {% for object in object_list %}
+        <div class="col-md-3 card-deck">
+            
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{ object.sekil.url }}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{object.kitab_ad}}</h5>
+                  <a href="{% url 'book-detail' object.slug %}"><p class="card-text">{{object.kitab_onsoz|truncatechars:30}}</p></a>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Yazar  : <span class="badge badge-info">{{ object.kitab_yazar.yazar_adi }} {{ object.kitab_yazar.yazar_soyadi }} </span></li>
+                  <li class="list-group-item">Janr   :  <span class="badge badge-secondary">{{object.kitab_janr.janr_adi}}</span></li>
+                  <li class="list-group-item">Sehife : <span>{{object.kitab_seh}}</span> </li>
+                </ul>
+                <div class="card-body">
+                  <a class="card-link btn btn-danger" href="{{object.slug}}/delete">Sil</a>
+                  <a class="card-link btn btn-success"  href="{{object.slug}}/update">Tenzimle</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}

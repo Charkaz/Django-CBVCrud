@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<form   method="POST" >
+    {% csrf_token %}
+<span>Silmek istediyinize eminsiniz?</span>
+<button class="btn btn-danger" type="submit" >Sil</button>
+</form>
+{% endblock %}
