@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.environ.get("POSTGRES_DB","CBVCrud"),
         'USER': os.environ.get("postgres_USER","postgres"),
-        'PASSWORD':os.environ.get("POSTGRES_PASSWORD","Chalisan98"), #bu hissede ve oz passwordunuzu yazin .
+        'PASSWORD':os.environ.get("POSTGRES_PASSWORD","****"), #bu hissede ve oz passwordunuzu yazin .
         'HOST':os.environ.get("POSTGRES_HOST","127.0.0.1"),
         'PORT':os.environ.get("POSTGRES_PORT","5432"),
 
