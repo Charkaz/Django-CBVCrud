@@ -9,7 +9,7 @@
         <div class="col-md-3 card-deck">
             
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="{{ object.sekil.url }}" alt="Card image cap">
+                <img class="card-img-top" {% if  object.sekil %} src="{{ object.sekil.url }}" {% else %} src=".."  {% endif %} alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">{{object.kitab_ad}}</h5>
                   <a href="{% url 'book-detail' object.slug %}"><p class="card-text">{{object.kitab_onsoz|truncatechars:30}}</p></a>

@@ -25,7 +25,7 @@ class Kitab(models.Model):
     kitab_seh       = models.IntegerField(null=False,blank=False,default=0)
     stokda          = models.BooleanField(null=True,blank=False,default=True)
     kitab_onsoz     = models.TextField(null=True,blank=False)
-    sekil           = models.ImageField(null = True,upload_to='images/')
+    sekil           = models.ImageField(null = True,blank = True,upload_to='images/')
     slug            = models.SlugField(null=True,blank=False,unique=True)
     qeyd_tarix      = models.DateTimeField(auto_now_add=True)
 
